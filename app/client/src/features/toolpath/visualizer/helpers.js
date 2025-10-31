@@ -29,7 +29,7 @@ export const generateCuttingPointer = () => {
     const group = new THREE.Group();
 
     // Get accent color from CSS variable
-    const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#1abc9c';
+    const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#447da2';
 
     const material = new THREE.MeshStandardMaterial({
         color: accentColor,
@@ -188,7 +188,7 @@ export const generateCuttingPointer = () => {
     );
 
     // Helper for downstream debug/selection
-    group.userData.recolorPointerParts = (indices = [], color = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#1abc9c') => {
+    group.userData.recolorPointerParts = (indices = [], color = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#447da2') => {
         const meshes = [];
         group.traverse((child) => { if (child.isMesh && typeof child.userData.pointerIndex === 'number') meshes.push(child); });
         const colorObj = new THREE.Color(color);
@@ -200,7 +200,7 @@ export const generateCuttingPointer = () => {
     };
 
     // Allow recoloring by material index (1-based) when MTL was loaded
-    group.userData.recolorPointerMaterialByIndex = (index1Based = 1, color = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#1abc9c') => {
+    group.userData.recolorPointerMaterialByIndex = (index1Based = 1, color = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#447da2') => {
         const colorObj = new THREE.Color(color);
         // Try to access MaterialCreator cached on the group (if any)
         const materialCreator = group.userData._materialCreator;

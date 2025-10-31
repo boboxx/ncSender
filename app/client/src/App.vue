@@ -908,8 +908,8 @@ watch(
 );
 
 // Color customization (from settings store)
-const accentColor = ref(initialSettings?.accentColor || '#1abc9c');
-const gradientColor = ref(initialSettings?.gradientColor || '#34d399');
+const accentColor = ref(initialSettings?.accentColor || '#08588e');
+const gradientColor = ref(initialSettings?.gradientColor || '#447da2');
 
 const currentGradient = computed(() => {
   return `linear-gradient(135deg, ${accentColor.value} 0%, ${gradientColor.value} 100%)`;
@@ -1657,8 +1657,8 @@ const saveColors = async () => {
 };
 
 const resetColors = async () => {
-  const defaultAccent = '#1abc9c';
-  const defaultGradient = '#34d399';
+  const defaultAccent = '#08588e';
+  const defaultGradient = '#447da2';
 
   accentColor.value = defaultAccent;
   gradientColor.value = defaultGradient;

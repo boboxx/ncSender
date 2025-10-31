@@ -543,7 +543,7 @@ button.danger {
 }
 
 .toolbar.state--probing .machine-state {
-  color: #1abc9c;
+  color: #447da2;
   text-shadow: none;
 }
 
@@ -622,7 +622,7 @@ button.danger {
 }
 
 .toolbar.state--probing {
-  border-color: #1abc9c;
+  border-color: #447da2;
   box-shadow: var(--shadow-elevated), 0 0 20px rgba(26, 188, 156, 0.6);
   animation: pulse-glow-teal 2.5s infinite;
 }

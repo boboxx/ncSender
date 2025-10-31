@@ -151,14 +151,14 @@
             <input type="checkbox" :checked="floodEnabled" @change="toggleFlood" :disabled="isCoolantDisabled">
             <span class="slider"></span>
           </label>
-          <span>Flood</span>
+          <span>Flood - Vacuum</span>
         </div>
         <div class="spindle-toggle">
           <label class="switch">
             <input type="checkbox" :checked="mistEnabled" @change="toggleMist" :disabled="isCoolantDisabled">
             <span class="slider"></span>
           </label>
-          <span>Mist</span>
+          <span>Mist - Air</span>
         </div>
       </div>
 
