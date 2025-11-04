@@ -51,7 +51,12 @@ async function createWindow() {
 
   // Maximize window by default (unless in kiosk mode)
   if (!isKiosk) {
-    mainWindow.maximize();
+    //mainWindow.maximize();
+    //const primaryDisplay = screen.getPrimaryDisplay();
+    //const { width, height } = primaryDisplay.workAreaSize;
+    //mainWindow.setBounds({ x: 0, y: 0, width, height });
+    mainWindow.setFullScreen(true);
+
   }
 
   // Load the UI from the embedded server
